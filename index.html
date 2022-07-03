@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Mixed contents 해결 -->
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -51,8 +51,7 @@
     </style>
     <script>
         function save() {
-            alert("저장 버튼 클릭")
-            var form_data = new FormData($('#upload-file')[0]);
+            let form_data = new FormData($('#upload-file')[0]);
             $.ajax({
                 type: 'POST',
                 url: 'http://pythonapp-env.eba-immqynsp.ap-northeast-2.elasticbeanstalk.com/fileupload',
